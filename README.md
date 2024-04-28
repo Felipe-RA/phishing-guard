@@ -27,6 +27,10 @@ You can find a simple FASTAPI Backend that will allow you to run predictions aga
     sudo apt install uvicorn
     ```
 
+    ```bash
+    pip install requirements.txt
+    ```
+
 2. Run to launch the app
 
     ```bash
