@@ -8,8 +8,9 @@ import joblib
 import pandas as pd
 from pydantic import BaseModel
 from data_preprocessing import preprocess_url_features
-
+from dotenv import load_dotenv
 # Define a data model for input data validation (we are just checking a str here)
+load_dotenv()
 class url_body(BaseModel):
     url: str
 class url_body_openAi(BaseModel):
@@ -109,7 +110,9 @@ async def openai_url(openAi_url_body: url_body_openAi ):
 async def openai_message(openAi_message_body: message_body_openAi):
     try:
         content_call =  f"[BODY_MESSAGE]{openAi_message_body.message}"
-        response_message = call_openai_api(content_call, os.getenv("SERGIO_API_KEY", ""), os.getenv("SERGIO_ASSITANT_ID", ""))
+        api_key = os.getenv("SERGIO_API_KEY", "")
+        print(api_key)
+        response_message = call_openai_api(content_call, os.getenv("SERGIO_API_KEY", ""), os.getenv("SERGIO_ASSISTANT_ID", ""))
         return { "data": response_message }
 
     except Exception as e:
