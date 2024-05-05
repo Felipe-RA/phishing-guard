@@ -1,0 +1,4 @@
+.gitignore
+*.ipybnb
+*.csv
+*.md
