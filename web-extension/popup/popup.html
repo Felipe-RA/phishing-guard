@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title>Scam Spotter</title>
+    <link  rel="stylesheet" type="text/css" href="popup.css"/>
+	</head>
+  <body>
+    <div class="popup-title">
+      <h1>Scam Spotter</h1>
+      <img src="/favicon_io/underline.png"/>
+    </div>
+    <div class="popup-form">
+      <input id="popup-input" placeholder="paste your url here" type="text"/>
+      <p>OR</p>
+      <input id="popup-input-message" placeholder="paste your message here" type="text"/>
+      <button id="popup-button">Check</button>
+    </div>
+    <div class="popup-response">
+      <span class="loader"></span>
+    </div>
+    <div class="popup-gpt-container">
+
+      <button id="popup-button-url-assistant" class="button">See what ChatGPT thinks</button>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
