@@ -41,43 +41,43 @@ You can find a simple FASTAPI Backend that will allow you to run predictions aga
 All  endpoints just allow POST requests
 Send a POST request to /predict/: (We are using curl here, but if you guys have Postman that's also valid)
 
-    ```bash
-    curl -X 'POST' \
-    'http://127.0.0.1:8000/predict/' \
-    -H 'accept: application/json' \
-    -H 'Content-Type: application/json' \
-    -d '{
-    "url": "https://example.com"
-    }'
-    ```
-    You should get a response like:
+```bash
+curl -X 'POST' \
+'http://127.0.0.1:8000/predict/' \
+-H 'accept: application/json' \
+-H 'Content-Type: application/json' \
+-d '{
+"url": "https://example.com"
+}'
+```
+You should get a response like:
 
-    ```JSON
-    {"probability":"24.971%","classification":"not phishing"}
-    ```
+```JSON
+{"probability":"24.971%","classification":"not phishing"}
+```
 Send a POST request to /url-assistant/. Here the percentage has to be the one  you get from  /predict/ and should be type float: 
 
-    ```bash
-    curl -X 'POST' \
-    'http://127.0.0.1:8000/url-assistant/' \
-    -H 'accept: application/json' \
-    -H 'Content-Type: application/json' \
-    -d '{
-    "url": "https://example.com",
-    "percentage": 35.4
-    }'
-    ```
+```bash
+curl -X 'POST' \
+'http://127.0.0.1:8000/url-assistant/' \
+-H 'accept: application/json' \
+-H 'Content-Type: application/json' \
+-d '{
+"url": "https://example.com",
+"percentage": 35.4
+}'
+```
 Send a POST request to /url-message/: 
 
-    ```bash
-    curl -X 'POST' \
-    'http://127.0.0.1:8000/url-message/' \
-    -H 'accept: application/json' \
-    -H 'Content-Type: application/json' \
-    -d '{
-    "message": "Hi, How It is going?"
-    }'
-    ```
+```bash
+curl -X 'POST' \
+'http://127.0.0.1:8000/url-message/' \
+-H 'accept: application/json' \
+-H 'Content-Type: application/json' \
+-d '{
+"message": "Hi, How It is going?"
+}'
+```
 ## A notebook showing how are we structuring our OPENAI Usage
 
 - Available at [openai_gpt_4_API.ipynb](/openai_gpt_4_API.ipynb)
