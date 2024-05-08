@@ -1,3 +1,9 @@
+# Made with LOVE by 
+
+![image](https://github.com/Felipe-RA/phishing-guard/assets/49454068/e4d0bcfd-555e-4407-9c11-54452c6b67b7)
+
+
+
 # Phishing Guard
 
 ![PhishingGuard_Uploaded_128x128_nobg](https://github.com/Felipe-RA/phishing-guard/assets/49454068/718f41b5-23a2-41d8-8848-d953885d68a9)
